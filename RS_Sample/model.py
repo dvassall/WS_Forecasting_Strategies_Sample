@@ -81,23 +81,3 @@ for step in steps:
         print('RMSE =', np.round(rmse, 3), 'm/s')
         
     print('Average RMSE', np.round(np.mean(avg_rmse), 3), 'm/s')
-    
-    tarArray = pd.DataFrame([targetArray])
-    pickle_out = open(tPrint+'.pkl', 'wb')
-    pickle.dump(tarArray, pickle_out)
-    pickle_out.close()
-    
-    predArray = pd.DataFrame([predictionArray])
-    pickle_out = open(pPrint+'.pkl', 'wb')
-    pickle.dump(predArray, pickle_out)
-    pickle_out.close()
-    
-    errArray = pd.DataFrame([errorArray])
-    pickle_out = open(ePrint+'.pkl', 'wb')
-    pickle.dump(errArray, pickle_out)
-    pickle_out.close()
-    
-    testTimeArray = pd.DataFrame([testTimes])
-    pickle_out = open(testTimePrint+'.pkl', 'wb')
-    pickle.dump(testTimeArray, pickle_out)
-    pickle_out.close()
